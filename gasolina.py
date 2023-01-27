@@ -11,10 +11,8 @@ df_gasolina = pd.read_csv('gasolina.csv')
 
 # geração do gráfico
 
-grafico_gasolina = sns.lineplot(data=df_gasolina, x='dia', y='venda', palette='mako')
-grafico_gasolina.set(title='Hitórico de Preço da Gasolina', xlabel='Dia', ylabel='Venda');
+grafico_gasolina = sns.lineplot(data=df_gasolina, x='dia', y='venda', palette='BuGn')
+grafico_gasolina.set(title='Hitórico de Preço da Gasolina (JULHO/2021)', xlabel='Dia', ylabel='Venda');
 
 # salvando imagem
 plt.savefig('/content/wda-ebac/gasolina.png')
-
-%%writefile gasolina.py
